@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>賽爾號，啟動！</title>
+  <link rel="icon" type="ico" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="topbar container">
+      <div class="brand">
+        <img src="favicon.ico" class="brand-logo" alt="" />
+        賽爾號，啟動！
+      </div>
+      <span class="pill">ver 1.1.3</span>
+      <div class="spacer"></div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <div class="card">
+      <p style="text-align: center;">本登入器僅支援Windows系統，且僅供遊玩台服賽爾號使用。</p>
+    </div>
+
+    <div class="card card-hero">
+      <img src="banner.png" alt="展示圖片" class="hero-img">
+    </div>
+
+    <!-- Tabs -->
+    <div class="sidenav">
+      <div class="navitem active" data-section="main">主頁</div>
+      <div class="navitem" data-section="function">功能介紹</div>
+      <div class="navitem" data-section="download">登入器下載</div>
+      <div class="navitem" data-section="diary">開發日誌</div>
+    </div>
+
+    <!-- Main -->
+    <section id="main" class="section active grid">
+      <div class="grid">
+        <div class="card">
+          <h2>改動內容</h2>
+          <div class="badges">
+            <span class="badge">最新版本：1.1.3</span>
+            <span class="badge">最近更新：2025-09-14</span>
+          </div>
+
+          <h class="changelog">
+            <li>
+              <span class="tag new">新增</span>
+              每日助手追加新勇者之塔
+            </li>
+            <li>
+              <span class="tag new">新增</span>
+              面板開啟功能
+            </li>
+            <li>
+              <span class="tag fix">改善</span>
+              精靈隱藏自動過濾編號1000以前的精靈
+            </li>
+            <li>
+              <span class="tag back">回歸</span>
+              一鍵挖礦
+            </li>
+          </h>
+        </div>
+
+        <div class="card">
+          <h2>參考聲明</h2>
+          <div class="badges">
+            <span class="badge">參考作者：雪村</span>
+          </div>
+          <p>
+            此登入器是基於雪村釋出的「雪村原碼2.5」為基礎，由原作者加以參考並改進而成，並非全然由原作者獨自開發。</li>
+          </p>
+          <a href="https://drive.google.com/drive/folders/1Wsezg2vnA6sc7bMDfuSNvKM0MLl9oTMF" class="btn primary"
+            　target="_blank">雪村整合 Google Drive 連結</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download -->
+    <section id="download" class="section card">
+      <h2>免責聲明</h2>
+      <ul style="margin:0 0 0 0px">
+        <li>本程式僅供方便登入與遊玩使用，開發者不保證其安全性或穩定性。</li>
+        <li>使用本程式可能涉及遊戲帳號風險，包括但不限於封號、限制登入或其他處罰。</li>
+        <li>對於因使用本程式而造成的任何帳號損失、封禁或其他問題，開發者不承擔任何責任。</li>
+        <li>請使用者自行判斷風險並自行承擔後果。</li>
+      </ul>
+
+      <div class="disclaimer-check">
+        <label>
+          <input type="checkbox" id="agreeDisclaimer">
+          我已閱讀並同意免責聲明，並願意自行承擔使用後衍生的任何後果。</a>
+        </label>
+      </div>
+
+      <div id="gdriveDownload" style="display:none; margin-top:12px;">
+        <a href="https://drive.google.com/file/d/1q_Ds1BAuTR2ALSc2kWI0QhWynIfrZCt0/view?usp=sharing" class="btn primary"
+          target="_blank">➡ 前往 Google Drive
+          下載</a>
+      </div>
+    </section>
+
+    <!-- Diary -->
+    <section id="diary" class="section card">
+      <h2>開發日誌</h2><br>
+      <!-- 113 -->
+      <div class="badges">
+        <span class="badge toggle" data-target="changelog-113">版本編號：1.1.3</span>
+        <span class="badge toggle" data-target="changelog-113">更新日期：2025-09-14</span>
+      </div>
+      <ul id="changelog-113" class="changelog">
+        <li><span class="tag new">新增</span>每日助手追加新勇者之塔</li>
+        <li><span class="tag new">新增</span>面板開啟功能</li>
+        <li><span class="tag fix">改善</span>精靈隱藏自動過濾編號1000以前的精靈</li>
+        <li><span class="tag back">回歸</span>一鍵挖礦</li>
+      </ul><br>
+
+      <!-- 112 -->
+      <div class="badges">
+        <span class="badge toggle" data-target="changelog-112">版本編號：1.1.2</span>
+        <span class="badge toggle" data-target="changelog-112">更新日期：2025-08-28</span>
+      </div>
+      <ul id="changelog-112" class="changelog">
+        <li><span class="tag new">新增</span>地圖功能</li>
+      </ul>
+    </section>
+
+
+    <!-- Function -->
+    <section id="function" class="section card">
+      <h2>功能介紹 <span class="pill">ver 1.1.3</span></h2>
+
+      <!-- 子 Tabs -->
+      <div class="sidenav subnav">
+        <div class="navitem-sub active" data-subsection="f0">電池</div>
+        <div class="navitem-sub" data-subsection="f1">地圖</div>
+        <div class="navitem-sub" data-subsection="f2">圖標</div>
+        <div class="navitem-sub" data-subsection="f3">稱號</div>
+        <div class="navitem-sub" data-subsection="f4">面板</div>
+        <div class="navitem-sub" data-subsection="f5">背包</div>
+        <div class="navitem-sub" data-subsection="f6">BGM切換</div>
+        <div class="navitem-sub" data-subsection="f7">每日助手</div>
+        <div class="navitem-sub" data-subsection="f8">道具商店</div>
+        <div class="navitem-sub" data-subsection="f9">一鍵借火</div>
+        <div class="navitem-sub" data-subsection="f10">套裝選擇器</div>
+      </div>
+
+      <!-- 子 Sections -->
+      <div id="f0" class="subsection active">
+        <p>可以關閉電池，關閉後精靈將不再獲取經驗值與學習力。</p>
+        <p><b>進出戰隊基地後需要重新開關，否則將會失效。</b></p>
+      </div>
+      <div id="f1" class="subsection">
+        <p><b>鐘樓</b>：可以快速抵達台服出生點「夜寂鐘樓」地圖。</p>
+        <p><b>返回上一張地圖</b>：可以快速返回上一個所在的地圖。</p>
+      </div>
+      <div id="f2" class="subsection">
+        <p>沒有超能NONO也能使用隱藏活動圖標功能。</p>
+      </div>
+      <div id="f3" class="subsection">
+        <p>可以快速切換已經持有的能力稱號。</p>
+      </div>
+      <div id="f4" class="subsection">
+        <p><b>讀取</b>：選取面板資料夾中的txt檔案，資料夾位置在/resources/moudle。</p>
+        <p><b>開啟面板</b>：讀取txt檔後按下放入開啟面板就會開啟對應的面板，可以手動添加新的檔案進去。</p>
+        <a href="https://drive.google.com/file/d/1lmL82N9O5Oiy7YluuTEdPaqxoKIqPT4Q/view?usp=sharing" class="btn primary"
+          target="_blank">更細節的操作請參考使用說明書ppt</a>
+      </div>
+      <div id="f5" class="subsection">
+        <p><b>匯出背包精靈</b>：把當下你背包的所有精靈依照你的獲取時間從小到大匯出。</p>
+        <p><b>讀取精靈</b>：讀取匯出背包精靈的txt檔案，資料夾位置在/resources/Bag。</p>
+        <p><b>放入出戰背包</b>：把讀取的精靈放入出戰背包，會照著txt檔裡的順序放進來。</p>
+        <p><b>放入備戰背包</b>：把讀取的精靈放入被戰背包，倘若備戰格子不夠，多餘的精靈會放入出戰背包。</p>
+        <p><b>開啟/放入倉庫</b>：打開倉庫頁面或是將背包所有精靈放入倉庫。</p>
+        <a href="https://drive.google.com/file/d/1lmL82N9O5Oiy7YluuTEdPaqxoKIqPT4Q/view?usp=sharing" class="btn primary"
+          target="_blank">更細節的操作請參考使用說明書ppt</a>
+      </div>
+      <div id="f6" class="subsection">
+        <p>可以自由更換場景與戰鬥音樂，更換的位置在/resources/music，請把mp3放置於該處。</p>
+        <p>將資料夾裡的音樂檔案全刪了可以聽到原來賽爾號內的遊戲音樂。</p>
+        <p style="font-size:0.5em;">Boss：pve時候的背景音樂。</p>
+        <p style="font-size:0.5em;">Login：登入時的背景音樂。</p>
+        <p style="font-size:0.5em;">Scene：地圖中的背景音樂。</p>
+        <p style="font-size:0.5em;">Fighting：pvp時的背景音樂，巔峰對戰有時替換不到。</p>
+      </div>
+      <div id="f7" class="subsection">
+        <p style="font-size:0.9em;">以下有關於自動挑戰的功能建議在持有84/偽84以後再進行使用，不然可能會有難以通關的情形。</p>
+        <br>
+        <p><b>精靈戰鬥說明</b></p>
+        <p style="font-size:0.9em;">① 會自動使用精靈四個技能中排序第一個的技能，沒有PP會自動補PP。</p>
+        <p style="font-size:0.9em;">② 出戰順序為根據放入背包的順序決定，建議出戰前先排好順序，如84/偽84等。</p>
+        <p style="font-size:0.9em;">③ 使用補刀時建議選用聖靈譜尼，時空界皇會有無法補死的問題。</p>
+        <br>
+        <p><b>每日戰場</b></p>
+        <p style="font-size:0.9em;">① 自動挑戰經驗值與學習力戰場第六關各六次。</p>
+        <p style="font-size:0.9em;">② 打完以後又繼續按開始造成進不了其他戰鬥時，請按下緊急停止按鈕。</p>
+        <p style="font-size:0.9em;">③ 忘記關電池造成六界升級也請按下緊急停止按紐，並使用防呆系統繼續完成挑戰。</p>
+        <p style="font-size:0.9em;">④ 防呆系統：「輪次」為當前完成數+1、「第幾隻」為現在要打第幾隻精靈。</p>
+        <br>
+        <p><b>精靈王試煉</b></p>
+        <p style="font-size:0.9em;">① 選擇任意屬性的精靈王，挑戰困難等級副本，可以選擇要打幾次。</p>
+        <p style="font-size:0.9em;">② 打完以後又繼續按開始造成進不了其他戰鬥時，請按下緊急停止按鈕。</p>
+        <p style="font-size:0.9em;">③ 不支援挑戰其他難度。</p>
+        <br>
+        <p><b>戰隊</b></p>
+        <p style="font-size:0.9em;">① 每日貢獻：一鍵完成當日五次戰隊貢獻。</p>
+        <p style="font-size:0.9em;">② 戰隊任務：在任何場景打開戰隊任務面板。</p>
+        <p style="font-size:0.9em;">③ 道具中心：打開戰隊道具中心面板，只能在戰隊內場景打開，離開記得開關電池。</p>
+        <br>
+        <p><b>勇者之塔</b></p>
+        <p style="font-size:0.9em;">① 開始掃蕩：自動倒計時30分鐘，並自動領取，關掉助手重開也會繼續算。</p>
+        <p style="font-size:0.9em;">② 領取獎勵：關掉遊戲後再重開可以點擊領取，因為關掉遊戲時計時就被重製了。</p>
+        <br>
+        <p><b>新勇者之塔</b></p>
+        <p style="font-size:0.9em;">① 自動挑戰新勇者之塔第三十層五次，使用本功能前需手動挑戰到新勇者之塔第三十層。</p>
+        <p style="font-size:0.9em;">② 打完以後又繼續按開始造成進不了其他戰鬥時，請按下緊急停止按鈕。</p>
+        <p style="font-size:0.9em;">③ 忘記關電池造成六界升級也請按下緊急停止按紐，並使用防呆系統繼續完成挑戰。</p>
+        <p style="font-size:0.9em;">④ 防呆系統：「輪次」為當前完成數+1、「第幾隻」為現在要打第幾隻精靈。</p>
+        <br>
+        <p><b>X戰隊密室</b></p>
+        <p style="font-size:0.9em;">① 自動開啟副本並挑戰一次，因為一天只能挑戰三次,所以只能按三次。</p>
+        <p style="font-size:0.9em;">② 領取獎勵：領取當日通關獎勵。</p>
+        <p style="font-size:0.9em;">③ 每周累計五次通關的禮包需要自行到面板領取。</p>
+        <br>
+        <a href="https://drive.google.com/file/d/1lmL82N9O5Oiy7YluuTEdPaqxoKIqPT4Q/view?usp=sharing" class="btn primary"
+          target="_blank">尚有疑問的話請參考使用說明書ppt</a>
+      </div>
+      <div id="f8" class="subsection">
+        <p>可以快速購買正常渠道獲得的所有藥劑，異能精靈膠囊一次最多可以做50個。</p>
+        <p>建議不要做太快不然會有被官方封號的危險，建議可以單次製作5-10個、10秒做一次。</p>
+      </div>
+      <div id="f9" class="subsection">
+        <p>一鍵搜尋<b>當前所在地圖</b>持有綠火的賽爾並借取，左上角會啟動計時器，且會自動判斷身上是大/小綠火。</p>
+        <p>如果綠火沒了但有開著自動借火的話，會自行再搜尋一次地圖上有沒有綠火，沒有的話會停止搜尋。</p>
+      </div>
+      <div id="f10" class="subsection">
+        <p>可以快速切換已經持有的能力套裝。</p>
+        <p>換目鏡會直接在現有的套裝上再戴上去，<s>腐蝕套記得別穿</s>。</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>2025 WeSeer · Developed by VRC · Inspired by 雪村</footer>
+
+  <script>
+    // tabs
+    const navItems = document.querySelectorAll('.navitem');
+    const sections = document.querySelectorAll('.section');
+    function activate(id) {
+      sections.forEach(s => s.classList.toggle('active', s.id === id));
+      navItems.forEach(n => n.classList.toggle('active', n.dataset.section === id));
+      location.hash = id;
+    }
+    navItems.forEach(n => n.addEventListener('click', () => activate(n.dataset.section)));
+    if (location.hash) { const id = location.hash.slice(1); if (document.getElementById(id)) activate(id); }
+
+
+    // 同意免責聲明 → 顯示下載按鈕
+    const agreeBox = document.getElementById('agreeDisclaimer');
+    const gdriveBtn = document.getElementById('gdriveDownload');
+
+    if (agreeBox) {
+      agreeBox.addEventListener('change', () => {
+        gdriveBtn.style.display = agreeBox.checked ? 'block' : 'none';
+      });
+    }
+
+    // 子 tabs
+    const subNavItems = document.querySelectorAll('.navitem-sub');
+    const subSections = document.querySelectorAll('.subsection');
+
+    function activateSub(id) {
+      subSections.forEach(s => s.classList.toggle('active', s.id === id));
+      subNavItems.forEach(n => n.classList.toggle('active', n.dataset.subsection === id));
+    }
+
+    subNavItems.forEach(n => n.addEventListener('click', () => activateSub(n.dataset.subsection)));
+  </script>
+</body>
+
+</html>
