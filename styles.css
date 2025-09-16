@@ -311,6 +311,11 @@ footer {
   /* 藍色：回歸 */
 }
 
+.tag.up {
+  background: #c111fb;
+  /* 紫色：升級 */
+}
+
 .subnav {
   display: flex;
   gap: 10px;
