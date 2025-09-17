@@ -353,7 +353,7 @@ footer {
   /* 1) 讓背景圖在 iOS 平滑，避免 fixed 造成抖動 */
   body {
     background-attachment: scroll;      /* 覆蓋 fixed */
-    background-position: center 100px;  /* 往下偏移，讓主視覺不被遮住 */
+    /* background-position: center 100px;   往下偏移，讓主視覺不被遮住 */
   }
 
   /* 2) Header 與 Footer 安全區（動態島／瀏海） */
