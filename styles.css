@@ -502,3 +502,9 @@ main.container > .card:first-child { margin-top: 8px; }  /* 原本 16px:contentR
   header + main.container { padding-top: 6px; }
   main.container > .card:first-child { margin-top: 6px; }
 }
+
+.btn-small {
+  padding: 6px 10px;   /* 縮小內距 */
+  font-size: 13px;     /* 縮小字體 */
+  border-radius: 8px;  /* 圓角稍微小一點 */
+}
