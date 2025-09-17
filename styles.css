@@ -510,27 +510,19 @@ footer {
   background: rgba(255, 255, 255, .95);
 }
 
-/* === Mobile: fix hero focus + sizing === */
 @media (max-width: 480px) {
-  /* 1) 高度用接近 16:9，別太高也別太矮 */
   .hero-slide {
     height: clamp(180px, 56.25vw, 220px);
-    /* 2) 把 per-slide 焦點變數歸零，不要讓 --fx/--fy 影響 contain 置中 */
-    --fx: 50%;
-    --fy: 50%;
   }
 
-  /* 3) 圖/影片完整顯示 + 一定置中，不會只出現單邊黑邊 */
   .hero-slide img,
   .hero-slide video {
-    object-fit: contain;
-    object-position: 50% 50% !important; /* 蓋掉 inline 的 --fx/--fy */
-    background: #000;
+    object-fit: cover;            /* 改回 cover，避免整塊黑掉 */
+    object-position: center center; /* 手機一律置中，不吃 --fx/--fy */
     -webkit-user-drag: none;
     user-select: none;
   }
 
-  /* 4) 關閉橫向拖動，避免手指一碰就帶著跑 */
   .hero-slider {
     touch-action: pan-y;
     overscroll-behavior-x: contain;
