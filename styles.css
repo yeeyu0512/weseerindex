@@ -510,14 +510,28 @@ footer {
   background: rgba(255, 255, 255, .95);
 }
 
-/* 取消原本手機的 height:160px，改為 16:9 比例 */
+/* ===== Mobile-only hero fixes ===== */
 @media (max-width: 480px) {
+  /* 1) 用視窗寬度算出高度：大約 16:9，但設上下限，避免太高或太矮 */
   .hero-slide {
-    height: 200px;            /* 比 160px 高一點，看得到臉 */
+    height: clamp(180px, 56.25vw, 220px); /* 56.25vw ≈ 16:9 的高度 */
+    /* 注意：這會覆蓋桌機的 height:220px 設定 */
   }
+
+  /* 2) 圖/影片完整顯示（必要時上下有黑邊），而且不要被手勢拖動 */
   .hero-slide img,
   .hero-slide video {
-    object-fit: contain;      /* 確保完整顯示 */
-    background: #000;         /* 上下補黑邊 */
+    object-fit: contain;     /* 不裁切，臉一定完整 */
+    background: #000;        /* 上下補邊用黑色（可改深藍） */
+    -webkit-user-drag: none; /* 禁止拖拽 */
+    user-select: none;
+  }
+
+  /* 3) 關閉輪播的水平手勢，只保留垂直滾動 */
+  .hero-slider {
+    touch-action: pan-y;           /* iOS/Android：禁水平滑 */
+    overscroll-behavior-x: contain;
+    /* 若仍被誤拖，可加：overflow-x: hidden;（保留下面註解） */
+    /* overflow-x: hidden; */
   }
 }
