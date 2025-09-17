@@ -510,9 +510,15 @@ footer {
   background: rgba(255, 255, 255, .95);
 }
 
+/* 取消原本手機的 height:160px，改為 16:9 比例 */
 @media (max-width: 480px) {
   .hero-slide {
-    height: auto;            /* 移除固定高度 */
-    aspect-ratio: 16 / 9;    /* 維持 16:9 */
+    height: auto;          /* 覆蓋桌機的固定高度 220px */
+    aspect-ratio: 16 / 9;  /* 手機維持 16:9 */
+  }
+  .hero-slide img,
+  .hero-slide video {
+    object-fit: contain;   /* 不裁切，人臉一定完整 */
+    background: #000;      /* 補上下黑邊 */
   }
 }
