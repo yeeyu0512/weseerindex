@@ -28,7 +28,16 @@
     </div>
 
     <div class="card card-hero">
-      <img src="banner.png" alt="展示圖片" class="hero-img">
+      <div class="hero-slider" id="heroSlider" aria-label="展示輪播" data-interval="4000">
+        <div class="hero-slide" style="--fx:-10%; --fy:15%;">
+          <video autoplay muted loop playsinline>
+            <source src="banner.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="hero-slide" style="--fx:50%; --fy:20%;"><img src="banner2.png" alt="空元行者"></div>
+        <div class="hero-slide" style="--fx:50%; --fy:20%;"><img src="banner3.png" alt="逐界蒼星"></div>
+      </div>
+      <div class="hero-dots" id="heroDots" aria-label="輪播頁碼"></div>
     </div>
 
     <!-- Tabs -->
@@ -294,6 +303,76 @@
     }
 
     subNavItems.forEach(n => n.addEventListener('click', () => activateSub(n.dataset.subsection)));
+
+    (function heroCarousel() {
+      const slider = document.getElementById('heroSlider');
+      if (!slider) return;
+      const slides = [...slider.querySelectorAll('.hero-slide')];
+      const dotsWrap = document.getElementById('heroDots');
+
+      // 生成指示點
+      const dots = slides.map((_, i) => {
+        const b = document.createElement('button');
+        b.setAttribute('aria-label', '前往第 ' + (i + 1) + ' 張');
+        b.addEventListener('click', () => goTo(i));
+        dotsWrap.appendChild(b);
+        return b;
+      });
+
+      let index = 0;
+      let timer = null;
+      const interval = parseInt(slider.dataset.interval || '4000', 10);
+
+      function goTo(i) {
+        index = (i + slides.length) % slides.length;
+        const x = slides[index].offsetLeft;
+        slider.scrollTo({ left: x, behavior: 'smooth' });
+        updateDots();
+      }
+
+      function next() { goTo(index + 1); }
+      function updateDots() {
+        dots.forEach((d, i) => d.classList.toggle('active', i === index));
+      }
+
+      // 根據捲動位置同步 index（手動滑動時也能更新指示點）
+      let ticking = false;
+      slider.addEventListener('scroll', () => {
+        if (ticking) return;
+        window.requestAnimationFrame(() => {
+          const scrollLeft = slider.scrollLeft;
+          const widths = slides.map(s => s.offsetLeft);
+          let nearest = 0, min = Infinity;
+          for (let i = 0; i < widths.length; i++) {
+            const dist = Math.abs(widths[i] - scrollLeft);
+            if (dist < min) { min = dist; nearest = i; }
+          }
+          index = nearest;
+          updateDots();
+          ticking = false;
+        });
+        ticking = true;
+      });
+
+      function start() { stop(); timer = setInterval(next, interval); }
+      function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+      // 滑鼠懸停暫停、自動播放
+      slider.addEventListener('mouseenter', stop);
+      slider.addEventListener('mouseleave', start);
+
+      // 初始
+      updateDots();
+      start();
+
+      // hash 切換頁籤到非主頁時也暫停（如果你想限制只在首頁播放）
+      window.addEventListener('hashchange', () => {
+        const id = location.hash.slice(1);
+        // 只有在有顯示 hero 的 section（例如主頁）時才播放
+        const heroVisible = document.querySelector('.card.card-hero')?.offsetParent !== null;
+        if (heroVisible) start(); else stop();
+      });
+    })();
   </script>
 </body>
 
