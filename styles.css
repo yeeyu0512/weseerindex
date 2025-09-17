@@ -510,28 +510,30 @@ footer {
   background: rgba(255, 255, 255, .95);
 }
 
-/* ===== Mobile-only hero fixes ===== */
+/* === Mobile: fix hero focus + sizing === */
 @media (max-width: 480px) {
-  /* 1) 用視窗寬度算出高度：大約 16:9，但設上下限，避免太高或太矮 */
+  /* 1) 高度用接近 16:9，別太高也別太矮 */
   .hero-slide {
-    height: clamp(180px, 56.25vw, 220px); /* 56.25vw ≈ 16:9 的高度 */
-    /* 注意：這會覆蓋桌機的 height:220px 設定 */
+    height: clamp(180px, 56.25vw, 220px);
+    /* 2) 把 per-slide 焦點變數歸零，不要讓 --fx/--fy 影響 contain 置中 */
+    --fx: 50%;
+    --fy: 50%;
   }
 
-  /* 2) 圖/影片完整顯示（必要時上下有黑邊），而且不要被手勢拖動 */
+  /* 3) 圖/影片完整顯示 + 一定置中，不會只出現單邊黑邊 */
   .hero-slide img,
   .hero-slide video {
-    object-fit: contain;     /* 不裁切，臉一定完整 */
-    background: #000;        /* 上下補邊用黑色（可改深藍） */
-    -webkit-user-drag: none; /* 禁止拖拽 */
+    object-fit: contain;
+    object-position: 50% 50% !important; /* 蓋掉 inline 的 --fx/--fy */
+    background: #000;
+    -webkit-user-drag: none;
     user-select: none;
   }
 
-  /* 3) 關閉輪播的水平手勢，只保留垂直滾動 */
+  /* 4) 關閉橫向拖動，避免手指一碰就帶著跑 */
   .hero-slider {
-    touch-action: pan-y;           /* iOS/Android：禁水平滑 */
+    touch-action: pan-y;
     overscroll-behavior-x: contain;
-    /* 若仍被誤拖，可加：overflow-x: hidden;（保留下面註解） */
-    /* overflow-x: hidden; */
   }
 }
+
