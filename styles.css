@@ -22,7 +22,7 @@ body {
 body {
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Noto Sans;
   color: var(--text);
-  background: url("bg.jpg") no-repeat center center fixed;
+  background: url("bg.png") no-repeat center center fixed;
   background-size: cover;
   background-position: center -43px;
   position: relative;
