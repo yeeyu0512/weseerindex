@@ -158,6 +158,16 @@ header {
   margin: 0;
 }
 
+.grid-equal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.grid-equal>.card {
+  margin: 0;
+}
+
 /* ========== Sidenav / Sections ========== */
 .sidenav {
   display: flex;
@@ -507,4 +517,5 @@ main.container > .card:first-child { margin-top: 8px; }  /* 原本 16px:contentR
   padding: 6px 10px;   /* 縮小內距 */
   font-size: 13px;     /* 縮小字體 */
   border-radius: 8px;  /* 圓角稍微小一點 */
+
 }
