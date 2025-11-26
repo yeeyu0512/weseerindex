@@ -58,22 +58,14 @@
         <div class="card">
           <h2>改動內容</h2>
           <div class="badges">
-            <span class="badge">最新版本：1.1.6</span>
-            <span class="badge">最近更新：2025-10-22</span>
+            <span class="badge">最新版本：1.1.7</span>
+            <span class="badge">最近更新：2025-11-26</span>
           </div>
 
           <h class="changelog">
             <li>
-              <span class="tag fix">更新</span>
-              優化背包2.0操作
-            </li>
-            <li>
-              <span class="tag fix">更新</span>
-              優化優化精靈透明
-            </li>
-            <li>
-              <span class="tag new">新增</span>
-              哈莫雷特動畫
+              <span class="tag fix">新增</span>
+              自動戰鬥自訂出招
             </li>
           </h>
         </div>
@@ -119,6 +111,14 @@
     <!-- Diary -->
     <section id="diary" class="section card">
       <h2>開發日誌</h2><br>
+      <!-- 117 -->
+      <div class="badges">
+        <span class="badge toggle" data-target="changelog-114">版本編號：1.1.7</span>
+        <span class="badge toggle" data-target="changelog-114">更新日期：2025-11-26</span>
+      </div>
+      <ul id="changelog-114" class="changelog">
+        <li><span class="tag fix">新增</span>自動戰鬥自訂出招</li>
+      </ul><br>
       <!-- 116 -->
       <div class="badges">
         <span class="badge toggle" data-target="changelog-114">版本編號：1.1.6</span>
@@ -170,123 +170,24 @@
 
 
     <!-- Function -->
-    <section id="function" class="section card">
-      <h2>功能介紹 <span class="pill">ver 1.1.6</span></h2>
-
-      <!-- 子 Tabs -->
-      <div class="sidenav subnav">
-        <div class="navitem-sub active" data-subsection="f0">電池</div>
-        <div class="navitem-sub" data-subsection="f1">地圖</div>
-        <div class="navitem-sub" data-subsection="f2">圖標</div>
-        <div class="navitem-sub" data-subsection="f3">稱號</div>
-        <div class="navitem-sub" data-subsection="f4">面板</div>
-        <div class="navitem-sub" data-subsection="f5">背包</div>
-        <div class="navitem-sub" data-subsection="f6">BGM切換</div>
-        <div class="navitem-sub" data-subsection="f7">每日助手</div>
-        <div class="navitem-sub" data-subsection="f8">道具商店</div>
-        <div class="navitem-sub" data-subsection="f9">一鍵借火</div>
-        <div class="navitem-sub" data-subsection="f10">套裝選擇器</div>
-      </div>
-
-      <!-- 子 Sections -->
-      <div id="f0" class="subsection active">
-        <p>可以關閉電池，關閉後精靈將不再獲取經驗值與學習力。</p>
-        <p><b>進出戰隊基地後需要重新開關，否則將會失效。</b></p>
-      </div>
-      <div id="f1" class="subsection">
-        <p><b>鐘樓</b>：可以快速抵達台服出生點「夜寂鐘樓」地圖。</p>
-        <p><b>返回上一張地圖</b>：可以快速返回上一個所在的地圖。</p>
-      </div>
-      <div id="f2" class="subsection">
-        <p>沒有超能NONO也能使用隱藏活動圖標功能。</p>
-      </div>
-      <div id="f3" class="subsection">
-        <p>可以快速切換已經持有的能力稱號。</p>
-      </div>
-      <div id="f4" class="subsection">
-        <p><b>讀取</b>：選取面板資料夾中的txt檔案，資料夾位置在/resources/moudle。</p>
-        <p><b>開啟面板</b>：讀取txt檔後按下放入開啟面板就會開啟對應的面板，可以手動添加新的檔案進去。</p><br>
-        <a href="https://drive.google.com/file/d/1lmL82N9O5Oiy7YluuTEdPaqxoKIqPT4Q/view?usp=sharing"
-          class="btn primary btn-small" target="_blank">更細節的操作請參考使用說明書ppt</a>
-      </div>
-      <div id="f5" class="subsection">
-        <p>於1.1.4版本升級為背包2.0，功能更便捷。</p><br>
-        <p><b>各項功能簡易說明</b></p>
-        <p style="font-size:0.8em;">① <b>獲取背包精靈</b>：把當下你背包的所有精靈依照你的獲取時間從小到大顯示在預覽格子上。</p>
-        <p style="font-size:0.8em;">② <b>匯出背包精靈</b>：匯出預覽格子中的精靈，可以事先調整格子中的順序影響匯出的檔案。</p>
-        <p style="font-size:0.8em;">③ <b>讀取精靈</b>：讀取匯出背包精靈的txt檔案，資料夾位置在/resources/Bag。</p>
-        <p style="font-size:0.8em;">④ <b>放入背包</b>：讀取txt檔後，按下放入背包會照著預覽格子裡的順序放進背包。
-          <span style="font-size:0.5em;">（可以在讀取精靈後調整預覽格子中的精靈再放入。）</span>
-        </p>
-        <p style="font-size:0.8em;">⑤ <b>快捷精靈</b>：可以快捷將常用精靈放入背包，具體操作方法建議上手或查閱使用說明書ppt。</p>
-        <p style="font-size:0.8em;">⑥ <b>開啟/放入倉庫</b>：打開倉庫頁面或是將背包所有精靈放入倉庫。</p>
-        <p style="font-size:0.8em;">⑦ <b>保存方案</b>：把當前陣容保存到你選擇的方案中。</p>
-        <p style="font-size:0.8em;">⑧ <b>切換背包</b>：把預覽格子中的精靈放入背包。</p>
-        <p style="font-size:0.8em;">⑨ <b>開啟背包</b>：打開背包頁面。</p><br>
-        <a href="https://drive.google.com/file/d/1lmL82N9O5Oiy7YluuTEdPaqxoKIqPT4Q/view?usp=sharing"
-          class="btn primary btn-small" target="_blank">更細節的操作請參考使用說明書ppt</a>
-      </div>
-      <div id="f6" class="subsection">
-        <p>可以自由更換場景與戰鬥音樂，更換的位置在/resources/music，請把mp3放置於該處。</p>
-        <p>將資料夾裡的音樂檔案全刪了可以聽到原來賽爾號內的遊戲音樂。</p>
-        <p style="font-size:0.5em;">Boss：pve時候的背景音樂。</p>
-        <p style="font-size:0.5em;">Login：登入時的背景音樂。</p>
-        <p style="font-size:0.5em;">Scene：地圖中的背景音樂。</p>
-        <p style="font-size:0.5em;">Fighting：pvp時的背景音樂，巔峰對戰有時替換不到。</p>
-      </div>
-      <div id="f7" class="subsection">
-        <p style="font-size:0.9em;">以下有關於自動挑戰的功能建議在持有84/偽84以後再進行使用，不然可能會有難以通關的情形。</p>
-        <br>
-        <p><b>精靈戰鬥說明</b></p>
-        <p style="font-size:0.9em;">① 會自動使用精靈四個技能中排序第一個的技能，沒有PP會自動補PP。</p>
-        <p style="font-size:0.9em;">② 出戰順序為根據放入背包的順序決定，建議出戰前先排好順序，如84/偽84等。</p>
-        <p style="font-size:0.9em;">③ 使用補刀時建議選用聖靈譜尼，時空界皇會有無法補死的問題。</p>
-        <br>
-        <p><b>每日戰場</b></p>
-        <p style="font-size:0.9em;">① 自動挑戰經驗值與學習力戰場第六關各六次。</p>
-        <p style="font-size:0.9em;">② 打完以後又繼續按開始造成進不了其他戰鬥時，請按下緊急停止按鈕。</p>
-        <p style="font-size:0.9em;">③ 忘記關電池造成六界升級也請按下緊急停止按紐，並使用防呆系統繼續完成挑戰。</p>
-        <p style="font-size:0.9em;">④ 防呆系統：「輪次」為當前完成數+1、「第幾隻」為現在要打第幾隻精靈。</p>
-        <br>
-        <p><b>精靈王試煉</b></p>
-        <p style="font-size:0.9em;">① 選擇任意屬性的精靈王，挑戰困難等級副本，可以選擇要打幾次。</p>
-        <p style="font-size:0.9em;">② 打完以後又繼續按開始造成進不了其他戰鬥時，請按下緊急停止按鈕。</p>
-        <p style="font-size:0.9em;">③ 不支援挑戰其他難度。</p>
-        <br>
-        <p><b>戰隊</b></p>
-        <p style="font-size:0.9em;">① 每日貢獻：一鍵完成當日五次戰隊貢獻。</p>
-        <p style="font-size:0.9em;">② 戰隊任務：在任何場景打開戰隊任務面板。</p>
-        <p style="font-size:0.9em;">③ 道具中心：打開戰隊道具中心面板，只能在戰隊內場景打開，離開記得開關電池。</p>
-        <br>
-        <p><b>勇者之塔</b></p>
-        <p style="font-size:0.9em;">① 開始掃蕩：自動倒計時30分鐘，並自動領取，關掉助手重開也會繼續算。</p>
-        <p style="font-size:0.9em;">② 領取獎勵：關掉遊戲後再重開可以點擊領取，因為關掉遊戲時計時就被重製了。</p>
-        <br>
-        <p><b>新勇者之塔</b></p>
-        <p style="font-size:0.9em;">① 自動挑戰新勇者之塔第三十層五次，使用本功能前需手動挑戰到新勇者之塔第三十層。</p>
-        <p style="font-size:0.9em;">② 打完以後又繼續按開始造成進不了其他戰鬥時，請按下緊急停止按鈕。</p>
-        <p style="font-size:0.9em;">③ 忘記關電池造成六界升級也請按下緊急停止按紐，並使用防呆系統繼續完成挑戰。</p>
-        <p style="font-size:0.9em;">④ 防呆系統：「輪次」為當前完成數+1、「第幾隻」為現在要打第幾隻精靈。</p>
-        <br>
-        <p><b>X戰隊密室</b></p>
-        <p style="font-size:0.9em;">① 自動開啟副本並挑戰一次，因為一天只能挑戰三次,所以只能按三次。</p>
-        <p style="font-size:0.9em;">② 領取獎勵：領取當日通關獎勵。</p>
-        <p style="font-size:0.9em;">③ 每周累計五次通關的禮包需要自行到面板領取。</p>
-        <br>
-        <a href="https://drive.google.com/file/d/1lmL82N9O5Oiy7YluuTEdPaqxoKIqPT4Q/view?usp=sharing"
-          class="btn primary btn-small" target="_blank">尚有疑問的話請參考使用說明書ppt</a>
-      </div>
-      <div id="f8" class="subsection">
-        <p>可以快速購買正常渠道獲得的所有藥劑，異能精靈膠囊一次最多可以做50個。</p>
-        <p>建議不要做太快不然會有被官方封號的危險，建議可以單次製作5-10個、10秒做一次。</p>
-      </div>
-      <div id="f9" class="subsection">
-        <p>一鍵搜尋<b>當前所在地圖</b>持有綠火的賽爾並借取，左上角會啟動計時器，且會自動判斷身上是大/小綠火。</p>
-        <p>如果綠火沒了但有開著自動借火的話，會自行再搜尋一次地圖上有沒有綠火，沒有的話會停止搜尋。</p>
-      </div>
-      <div id="f10" class="subsection">
-        <p>可以快速切換已經持有的能力套裝。</p>
-        <p>換目鏡會直接在現有的套裝上再戴上去，<s>腐蝕套記得別穿</s>。</p>
+    <section id="function" class="section active">
+      <h2>功能介紹 <span class="pill">ver 1.1.7</span></h2>
+      <div class="grid-equal">
+        <div class="card">
+          <h2>說明書</h2>
+          <p>
+            前往Google雲端看手寫的操作說明
+          </p>
+          <a href="https://drive.google.com/file/d/1lmL82N9O5Oiy7YluuTEdPaqxoKIqPT4Q/view?usp=sharing"
+            class="btn primary btn-small" target="_blank">說明書 Google Drive 連結</a>
+        </div>
+        <div class="card">
+          <h2>說明影片</h2>
+          <p>
+            前往Yt觀看操作示範影片(還在拍等等更新連結)
+          </p>
+          <a href="https://www.youtube.com/" class="btn primary btn-small" target="_blank">Yt 連結</a>
+        </div>
       </div>
     </section>
 
@@ -399,5 +300,6 @@
     })();
   </script>
 </body>
+
 
 </html>
