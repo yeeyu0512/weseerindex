@@ -5,6 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>賽爾號，啟動！</title>
+
+  <meta property="og:title" content="賽爾號，啟動！ - 繁體中文登入器" />
+  <meta property="og:description" content="支援 Windows 系統，內建優化功能與自動戰鬥。版本 1.1.8 現已發布。" />
+  <meta property="og:image" content="banner2.png" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#60a5fa" />
+
   <link rel="icon" type="ico" href="favicon.ico">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -16,7 +23,7 @@
         <img src="favicon.ico" class="brand-logo" alt="" />
         賽爾號，啟動！
       </div>
-      <span class="pill">ver 1.1.7</span>
+      <span class="pill">ver 1.1.8</span>
       <div class="spacer"></div>
       <a href="https://seermain.61.com.tw/" class="btn primary btn-small" target="_blank" rel="noopener"
         aria-label="前往遊戲官網（新分頁開啟）">前往遊戲官網</a>
@@ -27,24 +34,29 @@
 
   <main class="container">
 
+    <div class="mobile-hero"></div>
+
     <div class="card card-hero">
       <div class="hero-slider" id="heroSlider" aria-label="展示輪播" data-interval="4000">
+        <!-- <div class="hero-slide" style="--fx:-10%; --fy:15%;"> ``
+          <video autoplay muted loop playsinline preload="metadata" poster="banner2.png">
+            <source src="banner2026.mp4" type="video/mp4">
+          </video>
+        </div>
         <div class="hero-slide" style="--fx:-10%; --fy:15%;">
           <video autoplay muted loop playsinline preload="metadata">
             <source src="banner.mp4" type="video/mp4">
           </video>
-        </div>
-        <div class="hero-slide" style="--fx:50%; --fy:20%;"><img src="banner2.png" alt="空元行者"></div>
-        <div class="hero-slide" style="--fx:50%; --fy:20%;"><img src="banner3.png" alt="逐界蒼星"></div>
+        </div> -->
+        <div class="hero-slide" style="--fx:50%; --fy:20%;"><img src="banner2026.png" alt="梅赫維特"></div>
+        <div class="hero-slide" style="--fx:50%; --fy:20%;"><img src="banner2025.png" alt="奧菲利婭"></div>
+        <div class="hero-slide" style="--fx:50%; --fy:20%;"><img src="banner2024.png" alt="空元行者"></div>
+        <div class="hero-slide" style="--fx:50%; --fy:20%;"><img src="banner2023.png" alt="逐界蒼星"></div>
+        <div class="hero-slide" style="--fx:50%; --fy:41%;"><img src="banner2021&2022.png" alt="弒序神羅&至序聖華"></div>
       </div>
       <div class="hero-dots" id="heroDots" aria-label="輪播頁碼"></div>
     </div>
 
-    <div class="card">
-      <p style="text-align: center; font-size:0.5em;">本登入器僅支援Windows系統遊玩台服賽爾號，為維護您最佳網頁瀏覽體驗，建議您使用電腦瀏覽本網頁。</p>
-    </div>
-
-    <!-- Tabs -->
     <div class="sidenav">
       <div class="navitem active" data-section="main">主頁</div>
       <div class="navitem" data-section="function">功能介紹</div>
@@ -52,142 +64,144 @@
       <div class="navitem" data-section="diary">開發日誌</div>
     </div>
 
-    <!-- Main -->
-    <section id="main" class="section active grid">
-      <div class="grid">
-        <div class="card">
-          <h2>改動內容</h2>
-          <div class="badges">
-            <span class="badge">最新版本：1.1.7</span>
-            <span class="badge">最近更新：2025-11-26</span>
+    <section id="main" class="section active">
+      <div class="card dashboard-panel">
+
+        <div class="dash-column left-col">
+          <div class="dash-label">
+            <svg class="dash-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.072 0 2.063.52 2.7 1.35l3.787 5.166a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z" />
+            </svg>
+            SYSTEM VERSION
           </div>
 
-          <h class="changelog">
-            <li>
-              <span class="tag fix">新增</span>
-              自動戰鬥自訂出招
-            </li>
-          </h>
+          <div class="main-stat">
+            <span class="stat-number">1.1.8</span>
+            <span class="stat-status online">● 穩定</span>
+          </div>
+
+          <div class="stat-meta">最新發佈時間：2026-01-16</div>
+
+          <div class="dash-footer-box" onclick="document.querySelector('[data-section=\'diary\']').click()">
+            <div class="box-tag">NEW</div>
+            <div class="box-content text-truncate">全新自動戰鬥功能，還優化了記憶體占用</div>
+            <div class="box-arrow">→</div>
+          </div>
         </div>
 
-        <div class="card">
-          <h2>參考聲明</h2>
-          <div class="badges">
-            <span class="badge">參考作者：雪村</span>
+        <div class="dash-divider"></div>
+
+        <div class="dash-column right-col">
+          <div class="dash-label">
+            <svg class="dash-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M14.25 9.75L16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z" />
+            </svg>
+            CORE FRAMEWORK
           </div>
-          <p>
-            此登入器是基於雪村釋出的「雪村原碼2.5」為基礎，由原作者加以參考並改進而成，並非全然由原作者獨自開發。</li>
-          </p>
-          <a href="https://drive.google.com/drive/folders/1Wsezg2vnA6sc7bMDfuSNvKM0MLl9oTMF"
-            class="btn primary btn-small" target="_blank">雪村整合 Google Drive 連結</a>
+
+          <div class="author-row">
+            <div class="author-avatar">雪</div>
+            <div class="author-info">
+              <div class="author-title">雪村原碼 2.5</div>
+              <div class="author-subtitle">參考作者：雪村</div>
+            </div>
+          </div>
+
+          <div class="stat-meta">此登入器是基於雪村釋出的「雪村原碼2.5」為基礎，由原作者加以參考並改進而成，並非全然由原作者獨自開發。</div>
+
+          <a href="https://drive.google.com/drive/folders/1Wsezg2vnA6sc7bMDfuSNvKM0MLl9oTMF" class="dash-btn-ghost"
+            target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" style="width:16px;height:16px;">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+            </svg>
+            雪村整合雲端分享
+          </a>
         </div>
+
       </div>
     </section>
 
-    <!-- Download -->
     <section id="download" class="section card">
-      <h2>免責聲明</h2>
-      <ul style="margin:0 0 0 0px">
-        <li>本程式僅供方便登入與遊玩使用，開發者不保證其安全性或穩定性。</li>
-        <li>使用本程式可能涉及遊戲帳號風險，包括但不限於封號、限制登入或其他處罰。</li>
-        <li>對於因使用本程式而造成的任何帳號損失、封禁或其他問題，開發者不承擔任何責任。</li>
-        <li>請使用者自行判斷風險並自行承擔後果。</li>
-      </ul>
+      <h2>下載與安裝</h2>
 
-      <div class="disclaimer-check">
-        <label>
+      <div class="alert-box">
+        <div class="alert-icon">⚠️</div>
+        <div class="alert-content">
+          <h4>使用前請務必閱讀</h4>
+          <ul>
+            <li>本程式僅供方便登入與遊玩使用，<strong>開發者不保證其安全性或穩定性</strong>。</li>
+            <li>使用本程式可能涉及遊戲帳號風險，包括但不限於 <span class="highlight-red">封號、限制登入</span> 或其他處罰。</li>
+            <li>對於因使用本程式而造成的任何帳號損失，開發者不承擔任何責任。</li>
+            <li>請使用者自行判斷風險並 <strong>自行承擔後果</strong>。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="action-area">
+        <label class="checkbox-container">
           <input type="checkbox" id="agreeDisclaimer">
-          我已閱讀並同意免責聲明，並願意自行承擔使用後衍生的任何後果。</a>
+          <span class="checkmark"></span>
+          <span class="label-text">我已詳細閱讀以上聲明，並願意承擔所有使用風險。</span>
         </label>
-      </div>
 
-      <div id="gdriveDownload" style="display:none; margin-top:12px;">
-        <a href="https://drive.google.com/file/d/1q_Ds1BAuTR2ALSc2kWI0QhWynIfrZCt0/view?usp=sharing" class="btn primary"
-          target="_blank">➡ 前往 Google Drive
-          下載</a>
+        <div class="download-btn-wrapper">
+          <a href="https://drive.google.com/file/d/1q_Ds1BAuTR2ALSc2kWI0QhWynIfrZCt0/view?usp=sharing"
+            id="gdriveDownload" class="btn primary disabled" target="_blank">
+            <span class="btn-icon">⬇</span> 前往 Google Drive 下載
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- Diary -->
     <section id="diary" class="section card">
-      <h2>開發日誌</h2><br>
-      <!-- 117 -->
-      <div class="badges">
-        <span class="badge toggle" data-target="changelog-114">版本編號：1.1.7</span>
-        <span class="badge toggle" data-target="changelog-114">更新日期：2025-11-26</span>
-      </div>
-      <ul id="changelog-114" class="changelog">
-        <li><span class="tag fix">新增</span>自動戰鬥自訂出招</li>
-      </ul><br>
-      <!-- 116 -->
-      <div class="badges">
-        <span class="badge toggle" data-target="changelog-114">版本編號：1.1.6</span>
-        <span class="badge toggle" data-target="changelog-114">更新日期：2025-10-22</span>
-      </div>
-      <ul id="changelog-114" class="changelog">
-        <li><span class="tag fix">更新</span>優化背包2.0操作</li>
-        <li><span class="tag fix">更新</span>優化精靈透明</li>
-        <li><span class="tag new">新增</span>哈莫雷特動畫</li>
-      </ul><br>
-      <!-- 115 -->
-      <div class="badges">
-        <span class="badge toggle" data-target="changelog-114">版本編號：1.1.5</span>
-        <span class="badge toggle" data-target="changelog-114">更新日期：2025-10-10</span>
-      </div>
-      <ul id="changelog-114" class="changelog">
-        <li><span class="tag fix">更新</span>優化背包2.0操作</li>
-      </ul><br>
-      <!-- 114 -->
-      <div class="badges">
-        <span class="badge toggle" data-target="changelog-114">版本編號：1.1.4</span>
-        <span class="badge toggle" data-target="changelog-114">更新日期：2025-09-17</span>
-      </div>
-      <ul id="changelog-114" class="changelog">
-        <li><span class="tag up">升級</span>背包2.0</li>
-        <li><span class="tag new">新增</span>音樂開關</li>
-        <li><span class="tag new">新增</span>主動開關每日助手使用的自動戰鬥</li>
-      </ul><br>
-      <!-- 113 -->
-      <div class="badges">
-        <span class="badge toggle" data-target="changelog-113">版本編號：1.1.3</span>
-        <span class="badge toggle" data-target="changelog-113">更新日期：2025-09-14</span>
-      </div>
-      <ul id="changelog-113" class="changelog">
-        <li><span class="tag new">新增</span>每日助手追加新勇者之塔</li>
-        <li><span class="tag new">新增</span>面板開啟功能</li>
-        <li><span class="tag fix">更新</span>優化精靈隱藏並自動過濾編號1000以前的精靈</li>
-        <li><span class="tag back">回歸</span>一鍵挖礦</li>
-      </ul><br>
-      <!-- 112 -->
-      <div class="badges">
-        <span class="badge toggle" data-target="changelog-112">版本編號：1.1.2</span>
-        <span class="badge toggle" data-target="changelog-112">更新日期：2025-08-28</span>
-      </div>
-      <ul id="changelog-112" class="changelog">
-        <li><span class="tag new">新增</span>地圖功能</li>
-      </ul>
+      <h2>開發日誌</h2>
+      <div id="changelog-container"></div>
     </section>
 
+    <section id="function" class="section card">
+      <h2>功能介紹 <span class="pill">ver 1.1.8</span></h2>
 
-    <!-- Function -->
-    <section id="function" class="section">
-      <h2>功能介紹 <span class="pill">ver 1.1.7</span></h2>
       <div class="grid-equal">
-        <div class="card">
-          <h2>說明書</h2>
-          <p>
-            前往Google雲端看操作說明書
-          </p>
+
+        <div class="feature-panel">
+          <div class="feature-icon doc-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+            </svg>
+          </div>
+          <h3>詳細說明書</h3>
+          <p>完整的功能操作手冊，快速了解所有功能。</p>
           <a href="https://drive.google.com/file/d/1lmL82N9O5Oiy7YluuTEdPaqxoKIqPT4Q/view?usp=sharing"
-            class="btn primary btn-small" target="_blank">說明書 Google Drive 連結</a>
+            class="btn primary btn-full" target="_blank">
+            📖 閱讀線上文件
+          </a>
         </div>
-        <div class="card">
-          <h2>說明影片</h2>
-          <p>
-            前往Yt觀看操作示範影片
-          </p>
-          <a href="https://www.youtube.com/playlist?list=PLqBOU51Vta4KNYSiW2e0zT0h-zFiaRlNh" class="btn primary btn-small" target="_blank">Yt 連結</a>
+
+        <div class="feature-panel">
+          <div class="feature-icon video-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z" />
+            </svg>
+          </div>
+          <h3>操作示範影片</h3>
+          <p>透過 YouTube 影片，快速了解如何使用。</p>
+          <a href="https://www.youtube.com/playlist?list=PLqBOU51Vta4KNYSiW2e0zT0h-zFiaRlNh"
+            class="btn primary btn-full" target="_blank">
+            ▶️ 前往 YouTube 播放清單
+          </a>
         </div>
+
       </div>
     </section>
 
@@ -195,115 +209,7 @@
 
   <footer>2025 WeSeer · Developed by VRC · Inspired by 雪村</footer>
 
-  <script>
-    // tabs
-    const navItems = document.querySelectorAll('.navitem');
-    const sections = document.querySelectorAll('.section');
-    function activate(id) {
-      sections.forEach(s => s.classList.toggle('active', s.id === id));
-      navItems.forEach(n => n.classList.toggle('active', n.dataset.section === id));
-      location.hash = id;
-    }
-    navItems.forEach(n => n.addEventListener('click', () => activate(n.dataset.section)));
-    if (location.hash) { const id = location.hash.slice(1); if (document.getElementById(id)) activate(id); }
-
-
-    // 同意免責聲明 → 顯示下載按鈕
-    const agreeBox = document.getElementById('agreeDisclaimer');
-    const gdriveBtn = document.getElementById('gdriveDownload');
-
-    if (agreeBox) {
-      agreeBox.addEventListener('change', () => {
-        gdriveBtn.style.display = agreeBox.checked ? 'block' : 'none';
-      });
-    }
-
-    // 子 tabs
-    const subNavItems = document.querySelectorAll('.navitem-sub');
-    const subSections = document.querySelectorAll('.subsection');
-
-    function activateSub(id) {
-      subSections.forEach(s => s.classList.toggle('active', s.id === id));
-      subNavItems.forEach(n => n.classList.toggle('active', n.dataset.subsection === id));
-    }
-
-    subNavItems.forEach(n => n.addEventListener('click', () => activateSub(n.dataset.subsection)));
-
-    (function heroCarousel() {
-      const slider = document.getElementById('heroSlider');
-      if (!slider) return;
-      const slides = [...slider.querySelectorAll('.hero-slide')];
-      const dotsWrap = document.getElementById('heroDots');
-
-      // 生成指示點
-      const dots = slides.map((_, i) => {
-        const b = document.createElement('button');
-        b.setAttribute('aria-label', '前往第 ' + (i + 1) + ' 張');
-        b.addEventListener('click', () => goTo(i));
-        dotsWrap.appendChild(b);
-        return b;
-      });
-
-      let index = 0;
-      let timer = null;
-      const interval = parseInt(slider.dataset.interval || '4000', 10);
-
-      function goTo(i) {
-        index = (i + slides.length) % slides.length;
-        const x = slides[index].offsetLeft;
-        slider.scrollTo({ left: x, behavior: 'smooth' });
-        updateDots();
-      }
-
-      function next() { goTo(index + 1); }
-      function updateDots() {
-        dots.forEach((d, i) => d.classList.toggle('active', i === index));
-      }
-
-      // 根據捲動位置同步 index（手動滑動時也能更新指示點）
-      let ticking = false;
-      slider.addEventListener('scroll', () => {
-        if (ticking) return;
-        window.requestAnimationFrame(() => {
-          const scrollLeft = slider.scrollLeft;
-          const widths = slides.map(s => s.offsetLeft);
-          let nearest = 0, min = Infinity;
-          for (let i = 0; i < widths.length; i++) {
-            const dist = Math.abs(widths[i] - scrollLeft);
-            if (dist < min) { min = dist; nearest = i; }
-          }
-          index = nearest;
-          updateDots();
-          ticking = false;
-        });
-        ticking = true;
-      });
-
-      function start() { stop(); timer = setInterval(next, interval); }
-      function stop() { if (timer) { clearInterval(timer); timer = null; } }
-
-      // 滑鼠懸停暫停、自動播放
-      slider.addEventListener('mouseenter', stop);
-      slider.addEventListener('mouseleave', start);
-
-      // 初始
-      updateDots();
-      start();
-
-      // hash 切換頁籤到非主頁時也暫停（如果你想限制只在首頁播放）
-      window.addEventListener('hashchange', () => {
-        const id = location.hash.slice(1);
-        // 只有在有顯示 hero 的 section（例如主頁）時才播放
-        const heroVisible = document.querySelector('.card.card-hero')?.offsetParent !== null;
-        if (heroVisible) start(); else stop();
-      });
-    })();
-  </script>
+  <script src="script.js"></script>
 </body>
 
-
 </html>
-
-
-
-
