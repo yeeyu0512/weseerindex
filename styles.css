@@ -81,10 +81,10 @@ footer {
   padding: 24px;
 }
 
- main.container {
+main.container {
   padding-bottom: 0 !important;
   /* 去除容器底部的留白，改由卡片的 margin 來控制 */
-} 
+}
 
 header {
   background: rgba(17, 24, 39, .9);
@@ -358,20 +358,24 @@ footer {
   background: #22c55e;
 }
 
-.tag.fix {
+.tag.better {
   background: #f59e0b;
 }
 
-.tag.remove {
+.tag.fix {
   background: #ef4444;
 }
 
-.tag.back {
+.tag.update {
   background: #4e42ef;
 }
 
 .tag.up {
   background: #c111fb;
+}
+
+.tag.back {
+  background: #ff5cc9;
 }
 
 /* ========== Timeline Changelog ========== */
@@ -929,9 +933,9 @@ main.container>.card:first-child {
 
 .box-tag {
   background: var(--brand);
-  color: #0b0f17;
+  color: #000;
   font-size: 0.7em;
-  font-weight: 800;
+  font-weight: bold;
   padding: 2px 6px;
   border-radius: 4px;
 }
@@ -945,6 +949,7 @@ main.container>.card:first-child {
 .box-arrow {
   color: var(--brand);
   font-weight: bold;
+  font-size: 0.85em;
 }
 
 /* 右側：作者區塊 */
