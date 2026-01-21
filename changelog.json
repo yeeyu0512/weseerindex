@@ -1,5 +1,51 @@
 [
   {
+    "version": "1.1.9",
+    "date": "2026-01-21",
+    "changes": [
+      {
+        "tagType": "new",
+        "tagLabel": "新增",
+        "content": "本心關卡輔助"
+      },
+      {
+        "tagType": "new",
+        "tagLabel": "新增",
+        "content": "環．龍裔吃雞輔助"
+      },
+      {
+        "tagType": "new",
+        "tagLabel": "新增",
+        "content": "SPT懸賞 每日助手"
+      },
+      {
+        "tagType": "new",
+        "tagLabel": "新增",
+        "content": "全面助力保護賽爾號 每日助手"
+      },
+      {
+        "tagType": "new",
+        "tagLabel": "新增",
+        "content": "泰坦源脈 每日助手"
+      },
+      {
+        "tagType": "better",
+        "tagLabel": "優化",
+        "content": "子UI邏輯優化"
+      },
+      {
+        "tagType": "fix",
+        "tagLabel": "修復",
+        "content": "修復自動戰鬥相關問題"
+      },
+      {
+        "tagType": "update",
+        "tagLabel": "更新",
+        "content": "一鍵領取／挖礦搬遷至每日助手"
+      }
+    ]
+  },
+  {
     "version": "1.1.8",
     "date": "2026-01-16",
     "changes": [
@@ -9,9 +55,9 @@
         "content": "自動戰鬥新功能"
       },
       {
-        "tagType": "fix",
-        "tagLabel": "更新",
-        "content": "調整記憶體占用"
+        "tagType": "better",
+        "tagLabel": "優化",
+        "content": "優化記憶體占用問題"
       }
     ]
   },
@@ -31,13 +77,13 @@
     "date": "2025-10-22",
     "changes": [
       {
-        "tagType": "fix",
-        "tagLabel": "更新",
+        "tagType": "better",
+        "tagLabel": "優化",
         "content": "優化背包2.0操作"
       },
       {
-        "tagType": "fix",
-        "tagLabel": "更新",
+        "tagType": "better",
+        "tagLabel": "優化",
         "content": "優化精靈透明"
       },
       {
@@ -52,8 +98,8 @@
     "date": "2025-10-10",
     "changes": [
       {
-        "tagType": "fix",
-        "tagLabel": "更新",
+        "tagType": "better",
+        "tagLabel": "優化",
         "content": "優化背包2.0操作"
       }
     ]
@@ -94,8 +140,8 @@
         "content": "面板開啟功能"
       },
       {
-        "tagType": "fix",
-        "tagLabel": "更新",
+        "tagType": "better",
+        "tagLabel": "優化",
         "content": "優化精靈隱藏並自動過濾編號1000以前的精靈"
       },
       {
