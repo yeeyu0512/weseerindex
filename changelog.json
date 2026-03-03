@@ -1,5 +1,36 @@
 [
   {
+    "version": "1.2.0",
+    "date": "2026-03-03",
+    "changes": [
+      {
+        "tagType": "new",
+        "tagLabel": "新增",
+        "content": "星際迷航"
+      },
+      {
+        "tagType": "new",
+        "tagLabel": "新增",
+        "content": "面板功能新增輸入框"
+      },
+      {
+        "tagType": "new",
+        "tagLabel": "新增",
+        "content": "背包功能添加方案新增功能"
+      },
+      {
+        "tagType": "better",
+        "tagLabel": "優化",
+        "content": "Ｘ戰隊密室新增逃跑"
+      },
+      {
+        "tagType": "better",
+        "tagLabel": "優化",
+        "content": "精靈透明優化為可以於戰鬥中切換"
+      }
+    ]
+  },
+  {
     "version": "1.1.9",
     "date": "2026-01-30",
     "changes": [
