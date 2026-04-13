@@ -1,4 +1,15 @@
 [
+    {
+    "version": "1.2.1",
+    "date": "2026-04-12",
+    "changes": [
+      {
+        "tagType": "new",
+        "tagLabel": "更新",
+        "content": "大量新功能統整中"
+      }
+    ]
+  },
   {
     "version": "1.2.0",
     "date": "2026-03-03",
