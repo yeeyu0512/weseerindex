@@ -1,12 +1,73 @@
 [
+	{
+    "version": "1.2.2",
+    "date": "2026-05-01",
+    "changes": [
+		{
+        "tagType": "new",
+        "tagLabel": "新增",
+        "content": "全域設定"
+      },
+      {
+        "tagType": "better",
+        "tagLabel": "優化",
+        "content": "走出地圖外"
+      },
+	  {
+        "tagType": "better",
+        "tagLabel": "優化",
+        "content": "自訂出招"
+      },
+	  {
+        "tagType": "better",
+        "tagLabel": "優化",
+        "content": "神秘功能"
+      },
+	  {
+        "tagType": "better",
+        "tagLabel": "優化",
+        "content": "封包指令"
+      },
+	  {
+        "tagType": "better",
+        "tagLabel": "優化",
+        "content": "透明跟呼吸模式分離"
+      },
+	  {
+        "tagType": "better",
+        "tagLabel": "優化",
+        "content": "泰坦源脈"
+      }
+    ]
+  },
     {
     "version": "1.2.1",
     "date": "2026-04-12",
     "changes": [
       {
         "tagType": "new",
-        "tagLabel": "更新",
-        "content": "大量新功能統整中"
+        "tagLabel": "新增",
+        "content": "神秘功能"
+      },
+	  {
+        "tagType": "new",
+        "tagLabel": "新增",
+        "content": "流量"
+      },
+	  {
+        "tagType": "new",
+        "tagLabel": "新增",
+        "content": "FD替換"
+      },
+	  {
+        "tagType": "new",
+        "tagLabel": "新增",
+        "content": "封包"
+      },
+	  {
+        "tagType": "better",
+        "tagLabel": "優化",
+        "content": "自訂出招"
       }
     ]
   },
