@@ -36,6 +36,19 @@ body::before {
   z-index: -1;
 }
 
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(0, 0, 0, 0.15) 50%);
+  background-size: 100% 4px;
+  z-index: -1;
+  pointer-events: none;
+  /* 確保不會阻擋滑鼠點擊 */
+}
+
 /* 網頁內容載入動畫 */
 main,
 header,
@@ -142,9 +155,18 @@ header {
 
 .btn.primary {
   border-color: transparent;
-  background: linear-gradient(90deg, var(--brand), #22d3ee);
+  background: linear-gradient(90deg, var(--brand), #22d3ee, var(--brand));
+  background-size: 200% auto;
   color: #0b1020;
   font-weight: 700;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 10px rgba(96, 165, 250, 0.2);
+}
+
+.btn.primary:hover {
+  background-position: right center;
+  box-shadow: 0 0 15px rgba(96, 165, 250, 0.6), 0 0 30px rgba(34, 211, 238, 0.4);
+  transform: translateY(-2px);
 }
 
 /* 下載按鈕 - 鎖定狀態 (Disabled) */
@@ -263,11 +285,6 @@ header {
   border-radius: 8px;
   cursor: pointer;
   color: #a5b4fc;
-}
-
-.navitem.active {
-  color: #fff;
-  background: rgba(167, 139, 250, .35);
 }
 
 .section {
@@ -674,14 +691,24 @@ footer {
     background: rgba(255, 255, 255, 0.05);
   }
 
-  /* 修改 .navitem.active (選中狀態) */
+  /* 修改：加上左側光條的選中狀態 */
   .navitem.active {
     color: #fff;
-    /* 改用比較科技感的深藍/紫色背景，而非原本的亮紫色 */
-    background: rgba(59, 130, 246, 0.2);
-    border: 1px solid rgba(59, 130, 246, 0.4);
-    box-shadow: 0 0 12px rgba(59, 130, 246, 0.2);
-    /* 輕微發光 */
+    background: rgba(167, 139, 250, 0.2);
+    border-left: 3px solid var(--accent);
+    /* 增加左側指示線 */
+    border-radius: 4px 8px 8px 4px;
+    /* 配合邊框微調圓角 */
+  }
+
+  /* 針對手機版橫向滑動的特例修正 */
+  @media (max-width: 768px) {
+    .navitem.active {
+      border-left: none;
+      border-bottom: 3px solid var(--brand);
+      border-radius: 8px 8px 4px 4px;
+      background: rgba(59, 130, 246, 0.15);
+    }
   }
 
   .grid {
@@ -1046,4 +1073,15 @@ main.container>.card:first-child {
     justify-content: space-between;
     /* 手機上讓狀態靠右 */
   }
+}
+
+@keyframes pulseGlow {
+  0% { text-shadow: 0 0 4px #4ade80, 0 0 10px #4ade80; box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.4); }
+  50% { text-shadow: 0 0 4px #4ade80, 0 0 20px #4ade80; box-shadow: 0 0 0 6px rgba(74, 222, 128, 0); }
+  100% { text-shadow: 0 0 4px #4ade80, 0 0 10px #4ade80; box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
+}
+
+.stat-status.online {
+  animation: pulseGlow 2.5s infinite;
+  border-color: #4ade80; /* 強化邊框顏色 */
 }
