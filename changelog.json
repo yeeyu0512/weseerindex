@@ -1,5 +1,46 @@
 [
 	{
+    "version": "1.2.3",
+    "date": "2026-06-03",
+    "changes": [
+		{
+        "tagType": "new",
+        "tagLabel": "新增",
+        "content": "自動確認"
+      },
+      {
+        "tagType": "new",
+        "tagLabel": "新增",
+        "content": "無視障礙"
+      },
+      {
+        "tagType": "new",
+        "tagLabel": "新增",
+        "content": "直達清單"
+      },
+      {
+        "tagType": "better",
+        "tagLabel": "優化",
+        "content": "背包"
+      },
+	  {
+        "tagType": "better",
+        "tagLabel": "優化",
+        "content": "套裝"
+      },
+	  {
+        "tagType": "better",
+        "tagLabel": "優化",
+        "content": "fd移至設定"
+      },
+	  {
+        "tagType": "better",
+        "tagLabel": "優化",
+        "content": "面板,神秘功能,背包,套裝,稱號功能整合"
+      }
+    ]
+  },
+	{
     "version": "1.2.2",
     "date": "2026-05-01",
     "changes": [
