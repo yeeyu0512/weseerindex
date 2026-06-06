@@ -253,17 +253,6 @@ header {
 .grid>.card {
   margin: 0;
 }
-
-.grid-equal {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
-.grid-equal>.card {
-  margin: 0;
-}
-
 /* ========== Sidenav / Sections ========== */
 .sidenav {
   display: flex;
