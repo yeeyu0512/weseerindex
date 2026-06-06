@@ -799,35 +799,35 @@ main.container>.card:first-child {
 .feature-panel {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: center;    /* 新增：讓所有元件置中 */
+  text-align: center;     /* 新增：文字全部置中 */
   gap: 12px;
-  padding: 20px 16px;
+  padding: 24px 16px;     /* 微調：增加一點上下內距，單格看起來更大器 */
   border-radius: 12px;
-  /* 讓它看起來是卡片裡的凹槽或區塊，而非浮起來的卡片 */
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(148, 163, 184, 0.1);
   transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  
+  /* 關鍵新增：這會讓方塊在沒有 grid 限制時，自動撐滿 100% 寬度 */
+  width: 100%; 
 }
 
 .feature-panel:hover {
   background: rgba(255, 255, 255, 0.06);
   border-color: rgba(96, 165, 250, 0.3);
   transform: translateY(-2px);
-  /* 輕微浮動效果 */
 }
 
 .feature-panel h3 {
   margin: 0;
-  font-size: 1.25em;
+  font-size: 1.35em;      /* 微調：稍微放大一點標題 */
   color: #fff;
 }
 
 .feature-panel p {
-  font-size: 0.9em;
+  font-size: 0.95em;      /* 微調：稍微放大一點內文 */
   color: var(--muted);
   margin-bottom: 8px;
-  flex-grow: 1;
 }
 
 .feature-icon {
@@ -850,13 +850,11 @@ main.container>.card:first-child {
   color: #22d3ee;
 }
 
-.video-icon {
-  background: rgba(244, 63, 94, 0.15);
-  color: #f43f5e;
-}
+/* 原本的 video-icon 樣式可以不用管它或直接刪掉 */
 
 .btn-full {
   width: 100%;
+  max-width: 340px;       /* 關鍵修改：因為變寬了，限制按鈕最大寬度，才不會在電腦版拉得太長 */
   justify-content: center;
 }
 
